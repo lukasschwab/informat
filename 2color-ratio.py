@@ -19,9 +19,9 @@ clrlist1=[clr1[i:i+2] for i in range(0, len(clr1), 2)]
 clrlist2=[clr2[i:i+2] for i in range(0, len(clr2), 2)]
 
 # Define the ratios
-both=num1+num2
-rat1=float(num1/both)
-rat2=float(num2/both)
+both=float(num1+num2)
+rat1=num1/both
+rat2=num2/both
 
 # Final color to 0
 clrf=""
@@ -33,7 +33,7 @@ for x in range(0,3):
 	dec2=int(clrlist2[x],16)
 
 	# Find the modified color by taking a weighted average
-	modded=int(dec1*rat1)+int(dec2*rat2)
+	modded=int((dec1*rat1)+(dec2*rat2))
 
 	# Convert back to hex.
 	modded=hex(modded)[2:]
