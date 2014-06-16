@@ -4,6 +4,8 @@
 
 #-----------------------#
 
+# Defines the tint of a color by a percentage.
+
 # Note that in CSS3 there's a better implementation:
 # 	http://www.sitepoint.com/javascript-generate-lighter-darker-color/
 
