@@ -16,33 +16,38 @@ clr100=str(input('Enter the hex value for the 100 percet color.     '))
 # Split into a list of the component 2-digit numbers
 clrlist=[clr100[i:i+2] for i in range(0, len(clr100), 2)]
 
-# Input the percentage you're looking for
-pct=input('Enter the percentage, without a percent sign.     ')
-pct=float(100-pct)
-pct=pct/100
+# Start off the while-loop at x=0 so it isn't triggered
+x=0
+# Open the loop. Will continue indefinitely until an unacceptable value is input.
+while x < 1:
 
-# Final color to 0
-clrf=""
+	# Input the percentage you're looking for
+	pct=input('Enter the percentage, without a percent sign.     ')
+	pct=float(100-pct)
+	pct=pct/100
 
-# Iterate to scale every item in the list
-for s in clrlist:
-	dec=int(s,16)
+	# Final color to 0
+	clrf=""
 
-	# Find difference between this value and pure white
-	dif=255-dec
+	# Iterate to scale every item in the list
+	for s in clrlist:
+		dec=int(s,16)
 
-	# Add a normalized value to get you pct closer to full white
-	modded=dec+int(pct*dif)
+		# Find difference between this value and pure white
+		dif=255-dec
 
-	# Convert back to hex.
-	modded=hex(modded)[2:]
-	# Make sure it's two digits
-	if len(modded) < 2:
-		modded2="0"
-		modded2+=str(modded)
-		modded=modded2
+		# Add a normalized value to get you pct closer to full white
+		modded=dec+int(pct*dif)
 
-	# Concatonate to the string.
-	clrf+=str(modded)
+		# Convert back to hex.
+		modded=hex(modded)[2:]
+		# Make sure it's two digits
+		if len(modded) < 2:
+			modded2="0"
+			modded2+=str(modded)
+			modded=modded2
 
-print '#' + clrf
+		# Concatonate to the string.
+		clrf+=str(modded)
+
+	print '#' + clrf

@@ -15,32 +15,37 @@ clr100=str(input('Enter the hex value for the 100 percent color.     '))
 clrlist0=[clr0[i:i+2] for i in range(0, len(clr0), 2)]
 clrlist100=[clr100[i:i+2] for i in range(0, len(clr100), 2)]
 
-# Input the percentage you're looking for
-pct=input('Enter the percentage, without a percent sign.     ')
-pct=float(100-pct)
-pct=pct/100
 
-# Final color to 0
-clrf=""
+# Start off the while-loop at x=0 so it isn't triggered
+x=0
+# Open the loop. Will continue indefinitely until an unacceptable value is input.
+while x < 1:
+	# Input the percentage you're looking for
+	pct=input('Enter the percentage, without a percent sign.     ')
+	pct=float(100-pct)
+	pct=pct/100
 
-# Loop for every index in each of the lists
-for x in range(0,3):
-	# Convert the value in both of those spots to a decimal
-	dec0=int(clrlist0[x],16)
-	dec100=int(clrlist100[x],16)
+	# Final color to 0
+	clrf=""
 
-	# Find the modified color by taking a weighted average
-	modded=int(dec100*pct)+int(dec0*(1-pct))
+	# Loop for every index in each of the lists
+	for x in range(0,3):
+		# Convert the value in both of those spots to a decimal
+		dec0=int(clrlist0[x],16)
+		dec100=int(clrlist100[x],16)
 
-	# Convert back to hex.
-	modded=hex(modded)[2:]
-	# Make sure it's two digits
-	if len(modded) < 2:
-		modded2="0"
-		modded2+=str(modded)
-		modded=modded2
+		# Find the modified color by taking a weighted average
+		modded=int(dec100*pct)+int(dec0*(1-pct))
 
-	# Concatonate to the string.
-	clrf+=str(modded)
+		# Convert back to hex.
+		modded=hex(modded)[2:]
+		# Make sure it's two digits
+		if len(modded) < 2:
+			modded2="0"
+			modded2+=str(modded)
+			modded=modded2
 
-print '#' + clrf
+		# Concatonate to the string.
+		clrf+=str(modded)
+
+	print '#' + clrf
