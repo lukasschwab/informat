@@ -16,10 +16,10 @@ for x in range(0,50):
 	randi = randint(0,256) # Inclusive
 	hexi = hex(randi)[2:]
 	# Make sure it's two digits
-	if len(modded) < 2:
-		modded2="0"
-		modded2+=str(modded)
-		modded=modded2
+	if len(hexi) < 2:
+		hexi2="0"
+		hexi2+=str(hexi)
+		hexi=hexi2
 	total = ""
 
 	# This should be implemented as a loop

@@ -6,11 +6,14 @@ I started to practice making infographics, but selecting colors that gradiate pr
 First time building a practical application of Python, will continue to work on optimizing past scripts.
 
 ### Current library
+Useful:
 + **1color-percent.py** will prompt for a color to indicate 100%, and then ask for the percentage to be colored. It outputs a hex value. The higher the percentage, the darker the color.
 + **2color-percent.py** will prompt for a color to indicate 100% and a color to indicate 0%, and then ask for the percentage to be colored. It outputs a hex value that is the weighted average of those two colors, based on that percentage. The higher the percentage, the closer to the color to incate 100%.
 + **2color-ratio.py** will prompt for two colors and two ratio values. This ratio determines the weights for the average of the two colors.
 + **tint-match.py** will prompt for two colors. The second color's RGB values will be scaled to match the tint of the first color.
-+ **50shades.py** will output 50 randomly selected shades of gray. It's probably useless.
+Probably useless:
++ **50shades.py** will output 50 randomly selected shades of gray.
++ **colors-rand.py** will generate an input number of randomly selected colors.
 
 ### To-do
 + Repetition
