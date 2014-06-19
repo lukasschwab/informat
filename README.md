@@ -18,7 +18,6 @@ First time building a practical application of Python, will continue to work on 
 
 ### To-do
 + Repetition
-	+ Make an "if" statement to break the loop cleanly if a certain input (e.g. 'quit' or 'q') is entered instead of a percentage. This is good because it removes the error message that makes the break messy.
 	+ Add functionality to automatically iterate (example, to output 100 hex codes for every percentage.) Maybe parse in a list of percentages?
 + **tint-match.py**
 	+ One of the RGB values could theoretically be pushed over 256 if it has a high initial value but the initial tint is low. How to handle these cases?

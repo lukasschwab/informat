@@ -21,7 +21,11 @@ x=0
 # Open the loop. Will continue indefinitely until an unacceptable value is input.
 while x < 1:
 	# Input the percentage you're looking for
-	pct=int(raw_input('Enter the percentage, without a percent sign.     '))
+	pct=int(raw_input('Enter the percentage, without a percent sign, or quit.     '))
+	if pct=="quit":
+		import sys
+		print "Ending Script"
+		sys.exit()
 	pct=float(100-pct)
 	pct=pct/100
 

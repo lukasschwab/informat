@@ -28,7 +28,11 @@ loopit = 0
 while loopit < 1:
 
 	# Input the ratio
-	ratio=raw_input('Enter the ratio in the form "x:y."     ')
+	ratio=raw_input('Enter the ratio in the form x:y, or quit.     ')
+	if ratio=="quit":
+		import sys
+		print "Ending Script"
+		sys.exit()
 	num1=float(ratio[0:ratio.index(':')])
 	num2=float(ratio[(ratio.index(':')+1):len(ratio)])
 
