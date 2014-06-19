@@ -13,7 +13,7 @@
 from random import randint
 
 # Import the number of colors that need to be generated.
-num=input('Enter the number of colors to generate.     ')
+num=int(raw_input('Enter the number of colors to generate.     '))
 
 # Loop for that number
 for x in range(0,num):

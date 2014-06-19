@@ -17,7 +17,7 @@
 #-----------------------#
 
 # First, find tint to be matched
-clr1=str(input('Enter the hex value for the tint to be matched.     '))\
+clr1=raw_input('Enter the hex value for the tint to be matched.     ')
 # Split into RGB components
 # SHOULD SPLIT INTO A LIST HERE INSTEAD
 r1=int(clr1[0:2],16)
@@ -26,7 +26,7 @@ b1=int(clr1[4:6],16)
 # Calculate the sum
 total1=float(r1+g1+b1)
 
-clr2=str(input('Enter the hex value for the color to be changed.     '))
+clr2=raw_input('Enter the hex value for the color to be changed.     ')
 # Split into RGB components
 # SHOULD SPLIT INTO A LIST HERE INSTEAD
 r2=int(clr2[0:2],16)

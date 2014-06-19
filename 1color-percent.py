@@ -12,7 +12,7 @@
 #-----------------------#
 
 # Input the color that marks 100%, in hex form
-clr100=str(input('Enter the hex value for the 100 percet color.     '))
+clr100=raw_input('Enter the hex value for the 100 percet color.     ')
 # Split into a list of the component 2-digit numbers
 clrlist=[clr100[i:i+2] for i in range(0, len(clr100), 2)]
 
@@ -22,7 +22,7 @@ x=0
 while x < 1:
 
 	# Input the percentage you're looking for
-	pct=input('Enter the percentage, without a percent sign.     ')
+	pct=str(raw_input('Enter the percentage, without a percent sign.     '))
 	pct=float(100-pct)
 	pct=pct/100
 

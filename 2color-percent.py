@@ -9,8 +9,8 @@
 #-----------------------#
 
 # Prompt the two color inputs
-clr0=str(input('Enter the hex value for the 0 percent color.     '))
-clr100=str(input('Enter the hex value for the 100 percent color.     '))
+clr0=raw_input('Enter the hex value for the 0 percent color.     ')
+clr100=raw_input('Enter the hex value for the 100 percent color.     ')
 # Split into a list of the component 2-digit numbers
 clrlist0=[clr0[i:i+2] for i in range(0, len(clr0), 2)]
 clrlist100=[clr100[i:i+2] for i in range(0, len(clr100), 2)]
@@ -21,7 +21,7 @@ x=0
 # Open the loop. Will continue indefinitely until an unacceptable value is input.
 while x < 1:
 	# Input the percentage you're looking for
-	pct=input('Enter the percentage, without a percent sign.     ')
+	pct=int(raw_input('Enter the percentage, without a percent sign.     '))
 	pct=float(100-pct)
 	pct=pct/100
 
