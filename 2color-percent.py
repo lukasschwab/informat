@@ -17,15 +17,16 @@ clrlist100=[clr100[i:i+2] for i in range(0, len(clr100), 2)]
 
 
 # Start off the while-loop at x=0 so it isn't triggered
-x=0
+loopit=0
 # Open the loop. Will continue indefinitely until an unacceptable value is input.
-while x < 1:
+while loopit < 1:
 	# Input the percentage you're looking for
-	pct=int(raw_input('Enter the percentage, without a percent sign, or quit.     '))
-	if pct=="quit":
+	pct=raw_input('Enter the percentage, without a percent sign, or quit.     ')
+	if pct=='quit':
 		import sys
 		print "Ending Script"
 		sys.exit()
+	pct = int(pct)
 	pct=float(100-pct)
 	pct=pct/100
 

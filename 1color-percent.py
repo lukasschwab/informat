@@ -22,11 +22,12 @@ x=0
 while x < 1:
 
 	# Input the percentage you're looking for
-	pct=str(raw_input('Enter the percentage, without a percent sign, or quit.     '))
+	pct=raw_input('Enter the percentage, without a percent sign, or quit.     ')
 	if pct=="quit":
 		import sys
 		print "Ending Script"
 		sys.exit()
+	pct = int(pct)
 	pct=float(100-pct)
 	pct=pct/100
 
